@@ -120,6 +120,7 @@ end
   
   
 def play(board)
+  player_turn = 0
   until over?(board)
    turn(board)
   end
