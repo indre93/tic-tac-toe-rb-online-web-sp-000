@@ -120,7 +120,6 @@ end
   
   
 def play(board)
-  player_turn = 0
   until won?(board)
    turn(board)
   end
