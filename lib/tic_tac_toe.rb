@@ -76,4 +76,25 @@ def current_player(board)
   end
 end
 
+def won?(board)
+  WIN_COMBINATIONS.detect do |winning_combination|
+    
+end
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
 
