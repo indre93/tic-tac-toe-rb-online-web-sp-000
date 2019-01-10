@@ -120,14 +120,9 @@ end
   
   
 def play(board)
-  num_of_turns = 0
   turn(board)
   over?(board)
-  if num_of_turns == 9
-   puts "Cat's game!"
-    num_of_turns += 1
-  end
-end  
+
   
   
   
