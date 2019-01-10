@@ -120,6 +120,7 @@ end
   
   
 def play(board)
+  num_of_turns = 0
   turn(board)
   if over?(board)
     
