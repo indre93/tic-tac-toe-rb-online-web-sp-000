@@ -9,6 +9,7 @@ WIN_COMBINATIONS = [
   [6,4,2]
   ]
   
+  
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -17,13 +18,16 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
+
 def input_to_index(move)
   index = move.to_i - 1 
 end
 
+
 def move(board, index, token)
   board[index] = token
 end  
+
 
 def position_taken?(board, index)
   if board[index] == " " || board[index] == "" || board[index] == nil
@@ -33,6 +37,7 @@ def position_taken?(board, index)
   end
 end
 
+
 def valid_move?(board, position)
   index = position.to_i - 1 
    if !position_taken?(board, position) && position.between?(0,8)
@@ -41,6 +46,7 @@ def valid_move?(board, position)
     false
    end
 end
+
 
 def turn(board)
   puts "Please choose a number 1-9:"
@@ -56,7 +62,6 @@ def turn(board)
 end
 
 
-
 def turn_count(board)
   counter = 0
   board.each do |move|
@@ -67,6 +72,7 @@ def turn_count(board)
 counter
 end
 
+
 def current_player(board)
   if turn_count(board) % 2 == 0 
     "X"
@@ -74,6 +80,7 @@ def current_player(board)
     "O"
   end
 end
+
 
 def won?(board)
   WIN_COMBINATIONS.detect do |win_combination|
@@ -84,17 +91,21 @@ def won?(board)
   end
 end
 
+
 def full?(board)
   board.none? {|index| index == " "}
 end
+
 
 def draw?(board)
   full?(board) && !won?(board)
 end
 
+
 def over?(board)
   won?(board) || draw?(board) 
 end
+
 
 def winner(board)
   win_combination = won?(board)
