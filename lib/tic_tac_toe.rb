@@ -120,7 +120,7 @@ end
   
   
 def play(board)
-  turn(board)
+  do turn(board)
   over?(board)
 end  
   
