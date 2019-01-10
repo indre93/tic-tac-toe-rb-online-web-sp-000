@@ -123,11 +123,8 @@ def play(board)
   until won?(board)
    turn(board)
   end
-  if winner(board)
     puts "Congratulations #{token}"
-  else draw?(board)
     puts "Cat's Game!"
-  end
 end
 
   
