@@ -43,19 +43,18 @@ def valid_move?(board, position)
 end
 
 def turn(board)
-  puts "Please enter 1-9:"
-  user_input = gets.strip 
-  index = input_to_index(user_input) 
+  puts "Please choose a number 1-9:"
+  user_input = gets.chomp
+  index = input_to_index(user_input)
   if valid_move?(board, index)
-    true
-    move(board, index, token)
+    player_token = current_player(board)
+    move(board, index, player_token)
     display_board(board)
   else
-    puts "Invalid move."
-    puts "Please try again."
     turn(board)
   end
 end
+
 
 
 def turn_count(board)
