@@ -120,7 +120,7 @@ end
   
   
 def play(board)
-  input = gets
+  turn(board)
 end  
   
   
