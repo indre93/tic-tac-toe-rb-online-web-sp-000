@@ -121,7 +121,7 @@ end
   
 def play(board)
   player_turn = 0
-  until over?(board)
+  until over?(board) == 
    turn(board)
    player_turn += 1
   end
