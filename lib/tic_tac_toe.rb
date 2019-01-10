@@ -127,7 +127,7 @@ def play(board)
    player_turn += 1
   end
   if won?(board)
-    puts "Congratulations #{toke}"
+    puts "Congratulations #{token}"
   else
     puts "Cat's Game!"
   end
