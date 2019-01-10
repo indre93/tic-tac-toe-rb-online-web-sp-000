@@ -121,13 +121,13 @@ end
   
 def play(board)
   player_turn = 0
-  until player_turn == 9 
+  until won?(board)
    turn(board)
    player_turn += 1
   end
-  if won?(board)
+  if winner(board)
     puts "Congratulations #{token}"
-  else
+  else draw?(board)
     puts "Cat's Game!"
   end
 end
