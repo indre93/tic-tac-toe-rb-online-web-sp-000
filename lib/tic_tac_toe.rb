@@ -123,7 +123,6 @@ def play(board)
   player_turn = 0
   until won?(board)
    turn(board)
-   player_turn += 1
   end
   if winner(board)
     puts "Congratulations #{token}"
