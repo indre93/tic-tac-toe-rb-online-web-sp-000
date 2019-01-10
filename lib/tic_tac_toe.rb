@@ -120,8 +120,8 @@ end
   
   
 def play(board)
-  do turn(board)
-  over?(board)
+  turn(board)
+  until over?(board)
 end  
   
   
