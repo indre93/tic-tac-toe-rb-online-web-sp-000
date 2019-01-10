@@ -121,8 +121,9 @@ end
   
 def play(board)
   player_turn = 0
-  until over?(board) == 
+  until player_turn == 9 
    turn(board)
+   won?(board)
    player_turn += 1
   end
   if won?(board)
